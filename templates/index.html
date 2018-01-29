@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}  欢迎光临我的博客 {% endblock %}
+{% block headmessage %}
+    <h1>欢迎光临我的博客</h1>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <a href='/post/{{post.slug}}'>{{ post.title }}</a>
+        <br>
+    {% endfor %}
+{% endblock %}
