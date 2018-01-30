@@ -10,7 +10,8 @@ class Post(models.Model):
     slug = models.CharField(max_length=200)
     body = models.TextField()
     pub_date = models.DateTimeField(default=timezone.now)
-    
+    abstract = models.CharField(max_length=200,default="")    
+
 
     class Meta:
         ordering = ('-pub_date',)
